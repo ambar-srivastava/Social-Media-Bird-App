@@ -1,0 +1,461 @@
+@font-face {
+  font-family: "Chirp";
+  src: url("./Fonts/chirp-bold-web.ttf");
+}
+
+@font-face {
+  font-family: "Chirp";
+  src: url("./Fonts/chirp-regular-web.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Chirp";
+}
+
+button{
+  cursor: pointer;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+#left {
+  width: 50%;
+  height: 100vh;
+  background-image: url("./Images/twitter-fill.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+#ovrlay {
+  width: 100%;
+  height: 100vh;
+  background-color: #74c9fe80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#midovr .icons {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+#midovr .icons i {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#midovr .icons h5 {
+  font-size: 15px;
+  font-weight: bolder;
+  color: #fff;
+}
+
+#right {
+  width: 50%;
+  height: 100vh;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#panel {
+  width: 300px;
+  /* background-color: aqua */
+}
+
+#panel img {
+  width: 15%;
+  margin-bottom: 10px;
+}
+
+#panel h5 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#panel > p {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #32adfa;
+}
+
+#panel form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin-top: 15px;
+  padding: 8px 15px;
+  border-radius: 2px;
+  outline-color: #74c9fe80;
+  border: 1.5px solid #dadada;
+  color: gray;
+  font-weight: 100;
+}
+
+form input::placeholder {
+  color: #00000054;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.loginButton {
+  background-color: #48b5f8;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 30px;
+  color: #fff;
+  margin: 25px 0;
+  cursor: pointer;
+}
+
+.userPage {
+  display: flex;
+  flex-direction: column;
+}
+
+form > p {
+  margin-top: 15px;
+  font-size: 11px;
+  color: #00000077;
+}
+
+form > p a {
+  text-decoration: none;
+  color: #32adfa;
+  margin-left: 5px;
+}
+
+#profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#profile h1 {
+  color: #000000bb;
+  margin-bottom: 20px;
+}
+
+#profile a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 40px;
+  background-color: #32adfa;
+  border-radius: 100px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.pageSwitch {
+  font-size: 16px;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.icons {
+  font-size: 22px;
+  font-weight: lighter;
+}
+
+#menu {
+  height: 700px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+#menu img {
+  width: 70%;
+}
+
+.centerPanel {
+  background: white;
+  border: 1px solid #e6ebed;
+  width: 40%;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.rightPanel {
+  background: white;
+  width: 45%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.registerRedir {
+  color: #48b5f8;
+  height: 100vh;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+.regTitle {
+  margin-top: 30px;
+}
+
+.search {
+  padding: 10px 0;
+  width: 80%;
+  border: 1px solid gray;
+  border-radius: 100px;
+  background-color: #e6ebed;
+  border: none;
+  color: gray;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 15px;
+  text-align: center;
+}
+.relevant {
+  height: 110px;
+  border: 1px solid #e6ebed;
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 12px;
+}
+.relevant .relevantTitle {
+  margin: 10px;
+}
+
+.news {
+  height: 500px;
+  border: none;
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 15px;
+  background-color: #e6ebed;
+  font-size: 12px;
+}
+
+.news h1,
+.relevant h1 {
+  color: white;
+  font-size: 16px;
+}
+
+.news p,
+.relevant p {
+  color: gray;
+}
+
+.news snap,
+.relevant snap {
+  color: skyblue;
+}
+
+.news .pink {
+  background: rgb(202, 11, 174);
+  color: white;
+  width: 40px;
+  font-size: 10px;
+}
+
+.newsTitle {
+  margin: 20px;
+  color: black;
+}
+
+.newsTitle h1 {
+  font-size: 25px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.newsTitle p {
+  margin-bottom: 10px;
+}
+
+.newsTitle h3 {
+  margin-bottom: 10px;
+}
+
+.relevant .white {
+  padding: 5px 0;
+  cursor: pointer;
+  background: #e6ebed;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  width: 80px;
+  font-size: 10px;
+  text-align: center;
+}
+
+#leftPanel {
+  background-color: white;
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home {
+  /* position: fixed; */
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0;
+  height: 20px;
+  color: black;
+  opacity: 1;
+}
+
+.textarea {
+  background: rgb(121, 112, 112);
+  border-radius: 5px;
+  width: 80%;
+}
+
+.tweet,
+.feed {
+  padding: 10px;
+  color: black;
+  border: 1px solid #e6ebed;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.contentShow {
+  margin-bottom: 0px;
+  text-align: left;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.content {
+  margin-bottom: 0px;
+  text-align: right;
+  word-wrap: break-word;
+}
+.author {
+  color: #0d9488;
+  text-align: left;
+}
+.register {
+  color: whitesmoke;
+  cursor: pointer;
+  background: black;
+  height: 100vh;
+}
+
+hr {
+  color: #333;
+}
+.TweetText textarea {
+  padding: 10px;
+  outline: none;
+  width: 100%;
+  height: 100px;
+  border: none;
+  background-color: #e6ebed;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.edit {
+  /* text-align: right; */
+  font-size: 5px;
+  color: #ecfccb;
+}
+
+.editButton {
+  background-color: #48b5f8;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: white;
+}
+
+.deleteButton {
+  background-color: #eb3941;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 10px 0;
+  color: white;
+}
+
+.invalid {
+  font-size: 14px;
+  color: #eb3941;
+}
+.tweetLeft {
+  background: rgb(48, 149, 189);
+  width: 220px;
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+  align-items: center;
+  margin: 10px;
+}
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout span {
+  color: #0d9488;
+}
+
+.logout button {
+  background-color: #eb3941;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  padding: 12px 30px;
+  color: #fff;
+  margin: 25px 0;
+  cursor: pointer;
+}
